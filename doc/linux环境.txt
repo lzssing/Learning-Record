@@ -1,0 +1,51 @@
+
+
+linux下安装node.js
+下载
+wget https://nodejs.org/dist/v4.4.4/node-v4.4.4-linux-x64.tar.xz
+或者到官网下载二进制文件
+
+解压 tar -Jxv -f **.tar.xz(大写的J）
+建立软连接 
+//前面地址为实际地址
+ln -s /path_to/bin/node /usr/local/bin/node
+ln -s /path_to/bin/npm /usr/local/bin/npm
+
+添加淘宝镜像
+npm install -g cnpm --registry=https://registry.npm.taobao.org
+设置cnpm软连接 ln -s /home/files/nodejs/bin/cnpm /usr/local/bin/cnpm
+以后使用cnpm代替npm
+
+安装TypeScript
+	cnpm install -g typescript
+	设置tsc软连接 ln -s /home/files/nodejs/bin/tsc /usr/local/bin/tsc
+
+安装ionic
+	cnpm install -g ionic cordova
+	设置软连接ln -s /home/files/nodejs/bin/ionic /usr/local/bin/ionic
+		  ln -s /home/files/nodejs/bin/cordova /usr/local/bin/cordova
+
+linux安装桌面环境
+	使用命令 runlevel 查看当前的运行级别
+	使用命令 yum grouplist | more  查看是否安装了桌面环境的组件
+	安装桌面程序相关软件
+	yum groupinstall -y   "Desktop"   "Desktop Platform"   "Desktop Platform Development"　 "Fonts" 　"General Purpose Desktop"　 "Graphical Administration Tools"　 "Graphics Creation Tools" 　"Input Methods" 　"X Window System" 　"Chinese Support [zh]"　"Internet Browser"
+	
+
+
+
+ 在Linux【/mnt/projects】上挂载windos下的共享文件夹【//192.168.2.116/projects】
+ mount -t cifs -o username="administrator",password="123456" //192.168.2.116/projects /mnt/projects 
+
+
+全局安装 Angular CLI【前提：已安装node和npm】
+npm install -g @angular/cli
+设置软连接 ln -s /home/files/nodejs/bin/ng /usr/local/bin/ng
+
+
+设置使用cnpm   ng set --global packageManager=cnpm
+新建Angular项目   ng new myFirstAngular
+启动服务器 cd myFirstAngular  ng serve --open
+
+
+

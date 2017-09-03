@@ -1,0 +1,130 @@
+cccccc一、软件下载安装
+1.零信
+  下载地址：https://pubu.im/apps/windows
+  下载后解压，然后点击exe文件进行安装
+
+2. Visual Studio 模拟器
+  下载地址：https://www.visualstudio.com/zh-hans/vs/msft-android-emulator/
+  直接点击exe文件进行安装
+
+
+二、开发
+1.从coding.net上下载源码
+  下载fingertip源码  git clone https://git.coding.net/lvying/fingertip.git
+
+  下载smart源码 git clone https://git.coding.net/lvying/Smart.git
+
+
+三、Linux
+
+1.Linu虚拟机的IP地址 192.168.2.142
+
+2.查看linux系统的IP地址：ip addr
+
+3.把系统的语言临时设置成英文 ：LANG="" 
+
+4.重命名目录 ：mv A B  【将目录A重命名为B】
+
+5.强制删除某个文件夹：rm -rf 目录
+
+6.linux重启：reboot   shutdown -r now
+
+7.关闭firewall：systemctl stop firewalld.servic
+
+8.建立软连接：ln -s /path_to/bin/node /usr/local/bin/node
+
+
+四、android
+
+1.查找已连入电脑的安卓设备：adb devices
+
+2.ionic项目添加android平台：cordova platform add android -nofetch
+
+3.在android平台中国启动ionic项目：ionic cordova run android --livereload
+
+五、Ionic
+1.生成新项目
+	1.ionic start projectName
+	2.选择模板，然后等待生产文件夹
+	3.cd projectName 进入项目文件夹
+	4.ionic serve 启动项目，预览
+	5.创建页面 ionic g page pageName
+	  在app.module.ts文件中添加页面，引入文件，添加到declarations数组和entryComponents数组里
+	6.创建服务提供者 ionic g provider providerName
+	  在app.module.ts文件中添加页面，引入，添加到providers数组
+	7.创建数据模型 在src文件夹内新建文件夹models,在models文件夹内新建模型modelName-model.ts
+	8.添加需要的Cordova插件 ionic cordova plugin add pluginName
+	  显示已添加的Cordova插件 ionic cordova plugin list 
+	9.设置图片等静态资源,放置在src/assets/下的相关文件夹
+2.在页面中获取传进来的参数
+	constructor(nav: NavController, navParams: NavParams){
+
+	}
+	获取参数this.navParams.get('thing1');
+
+六、php artisan命令
+
+1.打开docker下workspace的命令行:进入laradock目录, docker-compose exec workspace bash
+
+2.进入docker下的相应项目文件夹：dir列出目录，cd projects/fingertip项目目录
+
+3.根据schema文件下的相应数据表json文件自动生产一系列文件：php artisan gen:code Advice （对应advices数据表）
+
+4.自动加载类类文件： composer dumpautoload
+
+5.刷新数据库：php artisan migrate:refresh
+
+6.填充数据：php artisan db:seed
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+ionic
+安装camera
+
+$ ionic cordova plugin add cordova-plugin-camera
+$ npm install --save @ionic-native/camera
+配置：在app.module.ts中的provider中添加Camera
+
+安装File
+
+$ ionic cordova plugin add cordova-plugin-file
+$ npm install --save @ionic-native/file
+配置：在app.module.ts中的provider中添加File
+
+安装File-Transfer
+$ ionic cordova plugin add cordova-plugin-file-transfer
+$ npm install --save @ionic-native/file-transfers
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

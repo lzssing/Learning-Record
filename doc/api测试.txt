@@ -1,0 +1,6 @@
+在Postman中选择post输入localhost:8080/api/login，在body中输入phone [13988888888] password [123456]
+发送请求，获取token,
+
+再次请求api时，根据需要选择get、post、delete、put等，然后输入api地址【如localhost:8080/api/advices】,
+在
+
